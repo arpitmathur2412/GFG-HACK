@@ -22,7 +22,7 @@ body('password').isLength({min:8}),
 body('email').isEmail(),
 body('phone').isLength({min:10,max:10}),
 body('age').isNumeric(),
-body('income').exists(),
+body('income').isNumeric(),
 
 async(req,res)=>{
     const errors=validationResult(req)
@@ -104,5 +104,19 @@ async (req,res)=>{
 
 })
 
+//Route -3 
+// Fetching the user details :GET /api/auth/fetchuser        (Requires Authentication)
+router.post("/getuser",fetchuser,async (req,res)=>{
+
+    try {
+        const userid=req.user.id;
+        const user=await User.findById(userid).select("-password");
+        res.send(user); 
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json("Internal server error occured")
+        
+    }
+    })
 
 module.exports=router
