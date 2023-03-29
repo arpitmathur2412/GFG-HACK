@@ -2,9 +2,7 @@ import './NavbarStyles.css'
 import {Component} from "react";
 import {MenuItems} from "./MenuItems";
 import {Link} from "react-router-dom";
-
 // import {Link} from "react-router-dom";
-
 class Navbar extends Component{
 
     state = {clicked : false}
@@ -31,7 +29,7 @@ class Navbar extends Component{
                             </li>
                         );
                     })}
-                    <button>Sign Up</button>
+                    <Link className={'sign-in-up'} to={'/signin'}>Sign In</Link>
                 </ul>
             </nav>
         )
