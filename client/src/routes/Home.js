@@ -14,7 +14,7 @@ const Home = () => {
                 title={'Just got the salary?'}
                 text={'Start investing!'}
                 btnText={'Get Started'}
-                url={'/'}
+                url={'/signin'}
                 btnClass={'show'}
             />
             <HomeInfo />

@@ -17,12 +17,11 @@ export const MenuItems = [
         cName : "nav-links"
 
     },
-    {
-        title : "Sign Up",
-        url : '/signup',
-        cName : "nav-links-mobile"
-
-    },
+    // changes
+    // {
+    //     title : "Sign Up",
+    //     url : '/signin',
+    //     cName : "nav-links-mobile"
+    // },
 ]
-
 
