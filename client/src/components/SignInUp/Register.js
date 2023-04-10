@@ -9,13 +9,26 @@ const Register = (props) => {
     const [phone, setPhone] = useState('');
     const [age, setAge] = useState('')
     const [income, setIncome] = useState('')
-    const [date, setDate] = useState('')
+    // const [date, setDate] = useState('')
 
 
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e){
+        const host="http://localhost:5000"
         e.preventDefault();
-        console.log(email);
+
+            // console.log(email,pass);
+        const response = await fetch(`${host}/api/auth/createuser`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                },
+            body: JSON.stringify({name:name,email:email,password:pass,age:age,income:income,phone:phone}) 
+        });
+    
+        const json=response.json()
+        console.log(json)
         // take input
     }
 
@@ -35,9 +48,8 @@ const Register = (props) => {
                 <input value={age} onChange={(e) => setAge(e.target.value)}type="number" placeholder=">18" id="age" name="age" />
                 <label htmlFor="income">Income</label>
                 <input value={income} onChange={(e) => setIncome(e.target.value)}type="text" placeholder="" id="income" name="income" />
-                <label htmlFor="date">Date</label>
-                <input value={date} onChange={(e) => setDate(e.target.value)} type="Date" placeholder="DD/MM/YYYY" id="date" name="date" />
-
+                {/* <label htmlFor="date">Date</label>
+                <input value={date} onChange={(e) => setDate(e.target.value)} type="Date" placeholder="DD/MM/YYYY" id="date" name="date" /> */}
 
                 <label htmlFor="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
