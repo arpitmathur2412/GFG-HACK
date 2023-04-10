@@ -11,7 +11,7 @@ h2{
 .login-form, .register-form {
     display: flex;
     flex-direction: column;
-    background-color: #02BDBD;
+    background-color: #50577A;
     padding: 5vh 10vh 10vh 10vh;
     border-radius: 20px;
     box-shadow: 2rem 2rem 2rem #c7c7c7;
