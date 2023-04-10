@@ -135,12 +135,24 @@ import React, { useState } from "react";
 import './SignInStyles.css'
 
 const SignIn = (props) => {
+    const host="http://localhost:5000"
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e){
         e.preventDefault();
-        console.log(email);
+        // console.log(email,pass);
+        const response = await fetch(`${host}/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            },
+          body: JSON.stringify({email:email,password:pass}) 
+        });
+
+        const json=response.json()
+        console.log(json)
     //     catch the input from here
     }
 
@@ -150,12 +162,12 @@ const SignIn = (props) => {
             <form className="login-form" onSubmit={handleSubmit}>
                 <h2>Sign In</h2>
                 <label htmlFor="email">email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
                 <label htmlFor="password">password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                 <button type="submit">Log In</button>
             </form>
-            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+            <button className="link-btn" onClick={() => props.onFormSwitch('register')}><strong>Don't have an account? Register here</strong></button>
         </div>
         </div>
     )
