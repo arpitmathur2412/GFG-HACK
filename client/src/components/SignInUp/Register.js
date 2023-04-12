@@ -27,7 +27,7 @@ const Register = (props) => {
             body: JSON.stringify({name:name,email:email,password:pass,age:age,income:income,phone:phone}) 
         });
     
-        const json=response.json()
+        const json=await response.json()
         console.log(json)
         // take input
     }

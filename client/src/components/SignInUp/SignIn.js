@@ -17,7 +17,7 @@ const SignIn = (props) => {
           body: JSON.stringify({email:email,password:pass}) 
         });
 
-        const json=response.json()
+        const json=await response.json()
         console.log(json)
         if(json.success){
             // save the auth-token and redirect

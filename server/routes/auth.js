@@ -94,8 +94,8 @@ async (req,res)=>{
                     id:user.id
                 }
             }   
+
             const authtoken=jwt.sign(payload,JWT_SECRET);
-            
             success=true;
             res.json({success,authtoken})
         }
