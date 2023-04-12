@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './SignInStyles.css'
 
 const SignIn = (props) => {
+    const navigate=useNavigate();
     const host="http://localhost:5000"
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -19,12 +21,15 @@ const SignIn = (props) => {
 
         const json=await response.json()
         console.log(json)
+
         if(json.success){
             // save the auth-token and redirect
             localStorage.setItem('token',json.authtoken)
+            navigate("/service")
         }
         else {
             alert("Invalid credentials")
+            
         }
     //     catch the input from here
     }

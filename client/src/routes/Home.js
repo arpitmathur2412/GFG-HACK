@@ -1,13 +1,13 @@
-import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/MainBody/Hero";
 import HomeHeroImg from "../assets/homeHero.jpg"
 import HomeInfo from "../components/MainBody/HomeInfo";
 import Footer from "../components/Footer/Footer";
-
+import Navbar from "../components/Navbar/Navbar"
 const Home = () => {
+
     return (
         <>
-            <Navbar />
+        <Navbar/>
             <Hero
                 cName={'hero'}
                 heroImg={HomeHeroImg}

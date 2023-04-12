@@ -1,13 +1,21 @@
-import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/MainBody/Hero";
 import ServiceHero from "../assets/serviceHero.jpg";
 import Footer from "../components/Footer/Footer";
-
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar"
 
 const Service = () => {
+    const navigate=useNavigate();
+
+    useEffect(() => {
+        if(!localStorage.getItem('token'))
+        navigate("/signin")
+    }
+    )   
     return (
         <>
-            <Navbar/>
+        <Navbar/>
             <Hero
                 cName={'hero-mid'}
                 heroImg={ServiceHero}

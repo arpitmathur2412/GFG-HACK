@@ -1,13 +1,12 @@
-import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/MainBody/Hero";
 import AboutHero from '../assets/aboutHero.jpg'
 import Footer from "../components/Footer/Footer";
 import AboutUs from "../components/About/AboutUs";
-
+import Navbar from "../components/Navbar/Navbar"
 const About = () => {
     return (
         <>
-            <Navbar/>
+        <Navbar/>
             <Hero
                 cName={'hero-mid'}
                 heroImg={AboutHero}
