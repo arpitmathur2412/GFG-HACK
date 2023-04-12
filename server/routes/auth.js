@@ -37,7 +37,7 @@ async(req,res)=>{
 
     else{
         let pass=req.body.password
-        const salt=await bcrypt.genSaltSync(10)
+        const salt= bcrypt.genSaltSync(10)
         const secpass=await bcrypt.hash(pass,salt)
 
         let user=await User.create({
@@ -67,6 +67,8 @@ body('email').isEmail(),
 body('password').exists(),
 
 async (req,res)=>{
+    let success=false;
+
     const errors=validationResult(req)
     if(!errors.isEmpty()){
         return res.status(400).json({errors:errors.array()})
@@ -93,7 +95,9 @@ async (req,res)=>{
                 }
             }   
             const authtoken=jwt.sign(payload,JWT_SECRET);
-            res.json({authtoken})
+            
+            success=true;
+            res.json({success,authtoken})
         }
     }
         } catch (error) {
