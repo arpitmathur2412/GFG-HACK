@@ -1,6 +1,7 @@
 import Hero from "../components/MainBody/Hero";
 import ServiceHero from "../assets/serviceHero.jpg";
 import Footer from "../components/Footer/Footer";
+import StockList from "../components/StockList/StockList"
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import Navbar from "../components/Navbar/Navbar"
@@ -26,9 +27,7 @@ const Service = () => {
                 url={'/'}
                 btnClass={'show'}
             />
-            <div>
-                <h2>Stock Prediction will be added here</h2>
-            </div>
+            <StockList/>
             <Footer />
         </>
     )
