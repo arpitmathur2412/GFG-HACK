@@ -109,17 +109,16 @@ async (req,res)=>{
 })
 
 //Route -3 
-// Fetching the user details :GET /api/auth/fetchuser        (Requires Authentication)
-router.post("/getuser",fetchuser,async (req,res)=>{
+// Fetching the user details :GET /api/auth/getuser        (Requires Authentication)
+router.get("/getuser",fetchuser,async (req,res)=>{
 
     try {
         const userid=req.user.id;
         const user=await User.findById(userid).select("-password");
-        res.send(user); 
+        res.json(user); 
     } catch (error) {
         console.log(error.message);
         res.status(500).json("Internal server error occured")
-        
     }
     })
 

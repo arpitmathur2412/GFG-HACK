@@ -37,7 +37,19 @@ export const Navbarf = () => {
                             </li>
                         );
                     })}
-                    {!localStorage.getItem('token')?<Link className={'sign-in-up'} to={'/signin'}>Sign In</Link>:<Button className='sign-in-up' onClick={onLogout}>Logout</Button>}
+                            {/* title : "Service",
+        url : '/service',
+        cName : "nav-links" */}
+                    {!localStorage.getItem('token')?
+                    <> 
+                    <Link className={'sign-in-up'} to={'/signin'}>Sign In</Link>
+                    </>
+                    :
+                    <>
+                    <Link className={'nav-links'} to={'/service'}>Service</Link>
+                    <Button className='sign-in-up' onClick={onLogout}>Logout</Button>                
+                    </>
+            }
                 </ul>
             </nav>
         )

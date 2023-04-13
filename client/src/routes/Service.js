@@ -2,19 +2,24 @@ import Hero from "../components/MainBody/Hero";
 import ServiceHero from "../assets/serviceHero.jpg";
 import Footer from "../components/Footer/Footer";
 import StockList from "../components/StockList/StockList"
-import { useEffect } from "react";
+import {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 // import Navbar from "../components/Navbar/Navbar"
 import Navbarf from "../components/Navbar/Navbarf";
 
-const Service = () => {
-    const navigate=useNavigate();
 
+const Service = () => {
+    
+    const navigate=useNavigate();
+    
     useEffect(() => {
-        if(!localStorage.getItem('token'))
-        navigate("/signin")
-    }
-    )   
+        if(!localStorage.getItem('token')){
+        navigate("/")
+        }
+        // else fetchUser()
+    })
+  
+    
     return (
         <>
         <Navbarf/>
@@ -26,7 +31,7 @@ const Service = () => {
                 btnText={'Explore'}
                 url={'/'}
                 btnClass={'show'}
-            />
+            />  
             <StockList/>
             <Footer />
         </>

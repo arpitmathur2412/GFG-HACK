@@ -14,6 +14,7 @@ const Register = (props) => {
 
 
     async function handleSubmit(e){
+        
         const host="http://localhost:5000"
         e.preventDefault();
 
