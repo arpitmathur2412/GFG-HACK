@@ -2,9 +2,10 @@ import './NavbarStyles.css'
 import {Component} from "react";
 import {MenuItems} from "./MenuItems";
 import {Link} from "react-router-dom";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 // import {Link} from "react-router-dom";
+
 class Navbar extends Component{
     state = {clicked : false}
     handleClick = () => {
@@ -12,16 +13,10 @@ class Navbar extends Component{
         this.setState({clicked : !this.state.clicked})
     }
     
-
-    onLogout=(e)=>{
-        
-        e.preventDefault()
-        localStorage.removeItem('token');
-        alert("please reload the page");
-   
-    }
     render() {
+        
         return (
+            
             <nav className='NavbarItems'>
                 <h1 className='navbar-logo'>StockWise</h1>
 
@@ -39,7 +34,12 @@ class Navbar extends Component{
                             </li>
                         );
                     })}
-                    {!localStorage.getItem('token')?<Link className={'sign-in-up'} to={'/signin'}>Sign In</Link>:<Button className='sign-in-up' onClick={this.onLogout}>Logout</Button>}
+                    {!localStorage.getItem('token')?<Link className={'sign-in-up'} to={'/signin'}>Sign In</Link>:<Button className='sign-in-up' onClick={(e)=>{
+                         const navigate=useNavigate();
+                         e.preventDefault()
+                         localStorage.removeItem('token');
+                         navigate("/");
+                    }}>Logout</Button>}
                     
                 </ul>
             </nav>

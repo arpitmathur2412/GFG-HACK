@@ -1,10 +1,12 @@
 import Footer from "../components/Footer/Footer";
 import Authentication from "../components/SignInUp/Authentication";
-import Navbar from "../components/Navbar/Navbar"
+// import Navbar from "../components/Navbar/Navbar"
+import Navbarf from "../components/Navbar/Navbarf";
+
 const About = () => {
     return (
         <>
-        <Navbar/>
+        <Navbarf/>
             <Authentication />
 
             <Footer />

@@ -3,7 +3,8 @@ import ServiceHero from "../assets/serviceHero.jpg";
 import Footer from "../components/Footer/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar"
+// import Navbar from "../components/Navbar/Navbar"
+import Navbarf from "../components/Navbar/Navbarf";
 
 const Service = () => {
     const navigate=useNavigate();
@@ -15,7 +16,7 @@ const Service = () => {
     )   
     return (
         <>
-        <Navbar/>
+        <Navbarf/>
             <Hero
                 cName={'hero-mid'}
                 heroImg={ServiceHero}
