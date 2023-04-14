@@ -30,8 +30,8 @@ const Register = (props) => {
         });
     
         const json=await response.json()
-        console.log(json)
-        if(json.success){
+        console.log(json.authtoken)
+        if(json.success1){
             // save the auth-token and redirect
             localStorage.setItem('token',json.authtoken)
             navigate("/service")
@@ -42,6 +42,7 @@ const Register = (props) => {
         }
         // take input
     }
+
 
     return (
         <div className="auth-form-container">

@@ -25,7 +25,7 @@ body('age').isNumeric(),
 body('income').isNumeric(),
 
 async(req,res)=>{
-    let success=false;
+    let success1=false;
     const errors=validationResult(req)
     if(!errors.isEmpty()){
         return res.status(400).json({errors:errors.array()})
@@ -56,8 +56,8 @@ async(req,res)=>{
             }
         }
         const authtoken=jwt.sign(data,JWT_SECRET)
-        success=true;
-        res.send({success,authtoken})
+        success1=true;
+        res.send({success1,authtoken})
     }
 })
 
