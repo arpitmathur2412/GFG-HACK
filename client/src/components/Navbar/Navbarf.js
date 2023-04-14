@@ -46,7 +46,7 @@ export const Navbarf = () => {
                     </>
                     :
                     <>
-                    <Link className={'nav-links'} to={'/service'}>Service</Link>
+                    <Link className={'nav-links'} to={'/service'}><h3>Service</h3></Link>
                     <Button className='sign-in-up' onClick={onLogout}>Logout</Button>                
                     </>
             }

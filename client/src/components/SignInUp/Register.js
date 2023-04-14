@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './RegisterStyles.css'
 
 
@@ -11,10 +12,10 @@ const Register = (props) => {
     const [income, setIncome] = useState('')
     // const [date, setDate] = useState('')
 
-
+    const navigate=useNavigate();
 
     async function handleSubmit(e){
-        
+  
         const host="http://localhost:5000"
         e.preventDefault();
 
@@ -30,6 +31,15 @@ const Register = (props) => {
     
         const json=await response.json()
         console.log(json)
+        if(json.success){
+            // save the auth-token and redirect
+            localStorage.setItem('token',json.authtoken)
+            navigate("/service")
+        }
+        else {
+            alert("Invalid credentials")
+            
+        }
         // take input
     }
 
@@ -55,7 +65,7 @@ const Register = (props) => {
                 <label htmlFor="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                 <br></br>
-                <button type="submit">Log In</button>
+                <button type="submit"><h5>Sign up</h5></button>
             </form>
             <br></br>
             <button className="link-btn" onClick={() => props.onFormSwitch('signin')}><strong>Already have an account? Login here.</strong></button>
