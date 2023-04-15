@@ -48,12 +48,6 @@
 }
 
 @media screen and (max-width: 850px) {
-    .footer{
-        margin: 4rem 2rem;
-    }
-    .footer i{
-        margin: 1rem 1rem 0 0;
-    }
     .bottom div{
         width: 50%;
     }
