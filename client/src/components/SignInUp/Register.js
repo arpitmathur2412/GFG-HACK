@@ -38,7 +38,6 @@ const Register = (props) => {
         }
         else {
             alert("Invalid credentials")
-            
         }
         // take input
     }
