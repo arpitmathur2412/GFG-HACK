@@ -28,8 +28,7 @@ const userschema=mongoose.Schema({
     },
     income:{
         type:Number,
-        required:true,
-        unique:true
+        required:true
     },
     date:{
         type:Date,
