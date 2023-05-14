@@ -1,6 +1,8 @@
-FROM node:14-alpine
+FROM node:latest
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y nodejs \
+    npm       
 COPY . .
-CMD ["npm", "start"]
+CMD ["npm", "start"]
