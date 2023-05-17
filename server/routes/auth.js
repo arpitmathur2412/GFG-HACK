@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 const userschema =require("../models/User")
 const { body, validationResult } = require('express-validator');
 const { json } = require("body-parser");
-const bcrypt=require("bcrypt")
+const bcrypt=require("bcryptjs")
 const jwt = require('jsonwebtoken');
 const JWT_SECRET="ajsbvjshbabdjvbdsjvhsdhj"
 const fetchuser=require("../middleware/fetchuser")
@@ -11,7 +11,7 @@ const fetchuser=require("../middleware/fetchuser")
 const router=express.Router();
 
 const User=mongoose.model("User",userschema)
-User.createIndexes();
+// await User.createIndexes();
 
 // ROUTE-1
 //creating a user on signup POST: "api/auth" doesn't require 

@@ -8,6 +8,14 @@ services:
       - 5000:5000
     depends_on:
       - mongo
+    
+    networks:
+      - bridge
+    
+    volumes:
+      - ./server/:/server/
+      - /server/node_modules
+
 
   frontend:
     build:
@@ -22,7 +30,15 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - mongo-data:/data/stockdb
+      - mongo-data:/data/db
+    networks:
+      - bridge
+
+networks:
+  bridge:
+    driver: bridge
+
 
 volumes:
   mongo-data:
+
