@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const JWT_SECRET="ajsbvjshbabdjvbdsjvhsdhj"
 
-const fetchuser=(req,res,next)=>{
+module.exports= fetchuser=(req,res,next)=>{
     const token=req.header('auth-token')
     if(!token){
         res.status(401).send({error:"please authenticate using a valid token"})
@@ -16,4 +16,4 @@ const fetchuser=(req,res,next)=>{
     next()
 }
 
-module.exports=fetchuser
+// module.exports=fetchuser
