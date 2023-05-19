@@ -10,8 +10,25 @@ const fetchuser=require("../middleware/fetchuser")
 
 const router=express.Router();
 
+mongoose.set('strictQuery', true);
+// mongoose.connect("mongodb://127.0.0.1/stockdb",{useNewUrlParser:true,bufferCommands:false,bufferTimeoutMS:5000});
+
+async function connectToDatabase() {
+    try {
+      await mongoose.connect("mongodb://mongo:27017/stockdb", {
+        useNewUrlParser: true
+      });
+      console.log('Connected to the database successfully!');
+      // Additional code or operations can be placed here
+    } catch (error) {
+      console.error('Failed to connect to the database:', error);
+    }
+  }
+  
+connectToDatabase();
+
 const User=mongoose.model("User",userschema)
-User.createIndexes();
+// User.createIndexes();
 
 // ROUTE-1
 //creating a user on signup POST: "api/auth" doesn't require 
@@ -123,5 +140,6 @@ router.get("/getuser",fetchuser,async (req,res)=>{
         res.status(500).json("Internal server error occured")
     }
     })
+
 
 module.exports=router
