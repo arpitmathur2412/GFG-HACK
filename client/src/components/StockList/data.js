@@ -54,26 +54,8 @@ module.exports.data = [
     exchange: "NYSE",
   },
   {
-    name: "Johnson & Johnson",
-    symbol: "JNJ",
-    sector: "Health Care",
-    exchange: "NYSE",
-  },
-  {
     name: "Procter & Gamble Company",
     symbol: "PG",
-    sector: "Consumer Staples",
-    exchange: "NYSE",
-  },
-  {
-    name: "Visa Inc.",
-    symbol: "V",
-    sector: "Information Technology",
-    exchange: "NYSE",
-  },
-  {
-    name: "Walmart Inc.",
-    symbol: "WMT",
     sector: "Consumer Staples",
     exchange: "NYSE",
   },
@@ -102,12 +84,6 @@ module.exports.data = [
     exchange: "NASDAQ",
   },
   {
-    name: "Netflix, Inc.",
-    symbol: "NFLX",
-    sector: "Communication Services",
-    exchange: "NASDAQ",
-  },
-  {
     name: "PayPal Holdings, Inc.",
     symbol: "PYPL",
     sector: "Information Technology",
@@ -118,12 +94,6 @@ module.exports.data = [
     symbol: "CRM",
     sector: "Information Technology",
     exchange: "NYSE",
-  },
-  {
-    name: "Adobe Inc.",
-    symbol: "ADBE",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
   },
   {
     name: "Cisco Systems, Inc.",
@@ -166,18 +136,6 @@ module.exports.data = [
     symbol: "BABA",
     sector: "Consumer Discretionary",
     exchange: "NYSE",
-  },
-  {
-    name: "Baidu, Inc.",
-    symbol: "BIDU",
-    sector: "Communication Services",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "JD.com, Inc.",
-    symbol: "JD",
-    sector: "Consumer Discretionary",
-    exchange: "NASDAQ",
   },
   {
     name: "Tencent Holdings Limited",
@@ -228,12 +186,6 @@ module.exports.data = [
     exchange: "NYSE",
   },
   {
-    name: "The Procter & Gamble Company",
-    symbol: "PG",
-    sector: "Consumer Staples",
-    exchange: "NYSE",
-  },
-  {
     name: "Nestle S.A.",
     symbol: "NSRGF",
     sector: "Consumer Staples",
@@ -252,37 +204,8 @@ module.exports.data = [
     exchange: "NASDAQ",
   },
   {
-    name: "Johnson & Johnson",
-    symbol: "JNJ",
-    sector: "Health Care",
-    exchange: "NYSE",
-  },
-  {
-    name: "Pfizer Inc.",
-    symbol: "PFE",
-    sector: "Health Care",
-  },
-  {
-    name: "NVIDIA Corporation",
-    symbol: "NVDA",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
-  },
-  {
     name: "Adobe Inc.",
     symbol: "ADBE",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Salesforce.com, Inc.",
-    symbol: "CRM",
-    sector: "Information Technology",
-    exchange: "NYSE",
-  },
-  {
-    name: "PayPal Holdings, Inc.",
-    symbol: "PYPL",
     sector: "Information Technology",
     exchange: "NASDAQ",
   },
@@ -299,12 +222,6 @@ module.exports.data = [
     exchange: "NASDAQ",
   },
   {
-    name: "Amazon.com, Inc.",
-    symbol: "AMZN",
-    sector: "Consumer Discretionary",
-    exchange: "NASDAQ",
-  },
-  {
     name: "Walmart Inc.",
     symbol: "WMT",
     sector: "Consumer Staples",
@@ -314,36 +231,6 @@ module.exports.data = [
     name: "Costco Wholesale Corporation",
     symbol: "COST",
     sector: "Consumer Staples",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Alphabet Inc.",
-    symbol: "GOOGL",
-    sector: "Communication Services",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Microsoft Corporation",
-    symbol: "MSFT",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Apple Inc.",
-    symbol: "AAPL",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Facebook, Inc.",
-    symbol: "FB",
-    sector: "Communication Services",
-    exchange: "NASDAQ",
-  },
-  {
-    name: "Tesla, Inc.",
-    symbol: "TSLA",
-    sector: "Consumer Discretionary",
     exchange: "NASDAQ",
   },
   {
@@ -386,12 +273,6 @@ module.exports.data = [
     name: "3M Company",
     symbol: "MMM",
     sector: "Industrials",
-    exchange: "NYSE",
-  },
-  {
-    name: "The Coca-Cola Company",
-    symbol: "KO",
-    sector: "Consumer Staples",
     exchange: "NYSE",
   },
   {
@@ -449,40 +330,16 @@ module.exports.data = [
     exchange: "NYSE",
   },
   {
-    name: "Sony Corporation",
-    symbol: "SNE",
-    sector: "Communication Services",
-    exchange: "NYSE",
-  },
-  {
     name: "Baidu, Inc.",
     symbol: "BIDU",
     sector: "Communication Services",
     exchange: "NASDAQ",
   },
   {
-    name: "Alibaba Group Holding Limited",
-    symbol: "BABA",
-    sector: "Consumer Discretionary",
-    exchange: "NYSE",
-  },
-  {
     name: "JD.com, Inc.",
     symbol: "JD",
     sector: "Consumer Discretionary",
     exchange: "NASDAQ",
-  },
-  {
-    name: "Procter & Gamble Company",
-    symbol: "PG",
-    sector: "Consumer Staples",
-    exchange: "NYSE",
-  },
-  {
-    name: "Nestle S.A.",
-    symbol: "NSRGF",
-    sector: "Consumer Staples",
-    exchange: "OTC Markets",
   },
   {
     name: "Unilever N.V.",
@@ -519,11 +376,5 @@ module.exports.data = [
     symbol: "ACN",
     sector: "Information Technology",
     exchange: "NYSE",
-  },
-  {
-    name: "Intel Corporation",
-    symbol: "INTC",
-    sector: "Information Technology",
-    exchange: "NASDAQ",
   },
 ];
