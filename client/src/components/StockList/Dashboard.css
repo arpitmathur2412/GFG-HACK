@@ -8,6 +8,9 @@
     margin-left: auto;
     align-items: center;
     justify-content: start;
+    position:static;
+    top: 20%;
+    right:0;
 }
 .heading{
     text-align: center;

@@ -15,7 +15,7 @@ mongoose.set('strictQuery', true);
 
 async function connectToDatabase() {
     try {
-      await mongoose.connect("mongodb://mongo:27017/stockdb", {
+        await mongoose.connect("mongodb://mongo:27017/stockdb", {
         useNewUrlParser: true
       });
       console.log('Connected to the database successfully!');

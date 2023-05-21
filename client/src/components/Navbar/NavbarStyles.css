@@ -39,7 +39,7 @@
 }
 
 .nav-links:hover{
-    background-color: #02bdbd;
+    background-color: #001d3de8;
     color: #fff;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
@@ -64,7 +64,7 @@
 }
 
 .sign-in-up:hover{
-    background-color: #02BDBD;
+    background-color: #001d3de8;
     color: #fff;
 }
 
@@ -111,7 +111,7 @@
     }
 
     .nav-links:hover{
-        background: aquamarine;
+        background: rgba(49, 58, 55, 0.888);
         transition: none;
     }
 
@@ -122,7 +122,7 @@
         margin: auto;
         border-radius: 4px;
         width: 80%;
-        background: #02BDBD;
+        background: rgba(49, 58, 55, 0.888);
         text-decoration: none;
         color: #fff;
         font-size: 1.2rem;
