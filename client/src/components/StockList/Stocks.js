@@ -18,7 +18,7 @@ const Stocks = () => {
             },
             data: new URLSearchParams({ symbol: stock.symbol }),
           };
-          await new Promise(resolve => setTimeout(resolve, index * 1));
+          await new Promise(resolve => setTimeout(resolve, index * 1500));
           try {
             const res = await axios.request(options);
             return {
