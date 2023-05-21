@@ -1,5 +1,3 @@
-import Hero from "../components/MainBody/Hero";
-import ServiceHero from "../assets/serviceHero.jpg";
 import Footer from "../components/Footer/Footer";
 import StockList from "../components/StockList/StockList"
 import {useEffect} from "react";
@@ -23,17 +21,8 @@ const Service = () => {
     return (
         <>
         <Navbarf/>
-            <Hero
-                cName={'hero-mid'}
-                heroImg={ServiceHero}
-                title={'Stock Investment'}
-                text={'Explore every possibility of growing!'}
-                btnText={'Explore'}
-                url={'/'}
-                btnClass={'show'}
-            />  
-            <StockList/>
-            <Footer />
+        <StockList/>
+        <Footer />
         </>
     )
 }

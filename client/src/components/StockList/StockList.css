@@ -1,9 +1,19 @@
-*{
+/* *{
     margin: 0;
     box-sizing: border-box;
     
 }
 .stocklist{
+    display:flex;
+    flex-direction: row;
+} */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.stocklist{
+    margin-top: 7rem;
     display:flex;
     flex-direction: row;
 }
