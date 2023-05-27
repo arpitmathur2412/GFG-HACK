@@ -8,6 +8,8 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import os
 import time
+from flask import Flask
+app=Flask(__name__)
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -341,9 +343,15 @@ class Model:
 agent=pickle.load(open("./model.pkl",'rb'))
 
 import json
+inp=[33,1033]
 
-inp=[10.50,60]
 #predict
+
+@app.route("/model")
+def index():
+    return "hello"
+    
+
 print(agent.trade(inp))
 json_data=agent.trade(inp)
 json_data=str(json_data)
@@ -351,3 +359,6 @@ json_data=str(json_data)
 print(json.dumps(json_data, indent = 1))
 with open("prediction.json", "w") as outfile:
     outfile.write(json_data)
+
+if __name__ == "__main__":
+    app.run(debug=True)

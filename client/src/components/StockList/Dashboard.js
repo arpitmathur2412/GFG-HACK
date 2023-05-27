@@ -20,14 +20,14 @@ const Dashboard = () => {
       </h1>
       <Button onClick={onClick}>show Details</Button>
       <div className="details">
-        <div class="dashboard-card card">
-          <div class="card-body">
-            <h5 class="card-title" >{user.name}</h5>
+        <div className="dashboard-card card">
+          <div className="card-body">
+            <h5 className="card-title" >{user.name}</h5>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">{user.phone}</li>
-            <li class="list-group-item">{user.email}</li>
-            <li class="list-group-item">{user.income}</li>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">{user.phone}</li>
+            <li className="list-group-item">{user.email}</li>
+            <li className="list-group-item">{user.income}</li>
           </ul>
         </div>
       </div>
