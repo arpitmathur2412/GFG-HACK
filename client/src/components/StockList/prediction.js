@@ -1,4 +1,4 @@
-[
+module.exports.stockdata=[
   {
     "name": "TATASTEEL ",
     "price": 10.949999999999818,

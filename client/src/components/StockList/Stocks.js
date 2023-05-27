@@ -167,22 +167,18 @@
 // };
 // export default Stocks;
 
-import React, { useState, useEffect, useContext } from "react";
+import React, {useContext } from "react";
 import userContext from "../context/users/userContext" 
 import "./Stocks.css";
 import Table from 'react-bootstrap/Table'
+import {stockdata} from "./prediction"
 
 const Stocks = () => {
-  const [data, setData] = useState({});
+  // const [data,setData] = useState(stockdata);
   const context = useContext(userContext)
   const {user,fetchUser}=context;
 
   fetchUser()
-  useEffect(() => { 
-    const jsonData = require('./prediction.json');
-    setData(jsonData);
-    console.log(jsonData)
-  }, []);
 
   return (
           <div className="container">
@@ -199,7 +195,7 @@ const Stocks = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {Array.from(data).filter((stock)=>stock.price>0 && stock.average<(user.income)/20).sort((a,b) => comparePrice(a, b)).map(stock => (
+                  {Array.from(stockdata).filter((stock)=>stock.price>0 && stock.average<(user.income)/20).sort((a,b) => comparePrice(a, b)).map(stock => (
                     <tr key={stock.symbol} className="content-row">
                       <td className="name">{stock.name}</td>
                       <td className="price">{stock.average.toFixed(2)}</td>
