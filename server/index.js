@@ -17,6 +17,10 @@ app.get("/",(req,res)=>{
     res.send("hello")
 })
 
-app.listen(5000,()=>{
-    console.log("server started at http://localhost:5000");
-})
+// app.listen(5000,()=>{
+//     console.log("server started at http://localhost:5000");
+// })
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});
