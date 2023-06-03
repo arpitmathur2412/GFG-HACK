@@ -7,15 +7,16 @@ const bcrypt=require("bcrypt")
 const jwt = require('jsonwebtoken');
 const JWT_SECRET="ajsbvjshbabdjvbdsjvhsdhj"
 const fetchuser=require("../middleware/fetchuser")
-
+require("dotenv").config()
 const router=express.Router();
 
 mongoose.set('strictQuery', true);
 // mongoose.connect("mongodb://127.0.0.1/stockdb",{useNewUrlParser:true,bufferCommands:false,bufferTimeoutMS:5000});
 
+
 async function connectToDatabase() {
     try {
-      await mongoose.connect("mongodb+srv://arpitmathur23:uUim8xUuisoT9OBn@gfg-cluster.q93pylo.mongodb.net/", {
+      await mongoose.connect(`mongodb+srv://arpitmathur23:${process.env.MONGODB_PASS}`+"@gfg-cluster.q93pylo.mongodb.net/", {
         useNewUrlParser: true
       });
       console.log('Connected to the database successfully!');
